@@ -1,0 +1,25 @@
+package Myproject;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class FirstProject {
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver", "E:\\chrome driver\\chromedriver-win64\\chromedriver.exe");
+		WebDriver d=new ChromeDriver();
+		d.get("https://letcode.in/signup");
+		WebElement e1=d.findElement(By.id("name"));
+		e1.sendKeys("sathya");
+		WebElement e2=d.findElement(By.id("email"));
+		e2.sendKeys("sathyavenkat020@gmail.com");
+		WebElement e3=d.findElement(By.id("pass"));
+		e3.sendKeys("Sat@12345678");
+		WebElement e4=d.findElement(By.xpath("/html/body/app-root/app-signup/div/div/div/div/form/div[5]/p/button"));
+		e4.click();
+		
+		
+
+}
+}
